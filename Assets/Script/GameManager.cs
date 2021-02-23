@@ -33,12 +33,18 @@ public class GameManager : MonoBehaviour
     #endregion
     
     public List<Cards> cardOnStart;
-    public int nbrCard;
+    [HideInInspector] public int nbrCard;
+    public float time;
     private void Start()
     {
         RandomCard();
     }
-    
+
+    public void Update()
+    {
+        
+    }
+
     public void RandomCard()
     {
         nbrCard = Random.Range(0, cardOnStart.Count);
