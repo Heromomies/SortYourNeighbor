@@ -33,15 +33,36 @@ public class GameManager : MonoBehaviour
     #endregion
     
     public List<Cards> cardOnStart;
+    public GameObject cardToInstantiate;
+    
     [HideInInspector] public int nbrCard;
     public float time;
+
+    private int _objectInList;
     private void Start()
     {
         RandomCard();
+        _objectInList = cardOnStart.Count;
     }
 
     public void RandomCard()
     {
         nbrCard = Random.Range(0, cardOnStart.Count);
+    }
+    public void InstantiateCard()
+    {
+        Debug.Log("New Card Instantiate");
+        Instantiate(cardToInstantiate, transform.position, Quaternion.identity);
+        _objectInList--;
+        if (_objectInList <= 0)
+        {
+            Debug.Log("There is no card in the list");
+            LevelFinish();   
+        }
+    }
+
+    public void LevelFinish()
+    {
+        //TODO Level finish 
     }
 }

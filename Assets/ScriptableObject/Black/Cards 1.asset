@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e80f6b448c78d4fafdb4077cb9f82d, type: 3}
   m_Name: Cards 1
   m_EditorClassIdentifier: 
-  pop: 1
   rel: 2
+  sprite: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 1}

@@ -14,4 +14,5 @@ public class Cards : ScriptableObject
     public enum Religion { GreenTrash, YellowTrash, OrdureMenagere, Discharge, None }
     
     public SpriteRenderer sprite;
+    public Color color;
 }

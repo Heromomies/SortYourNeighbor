@@ -15,8 +15,10 @@ public class TakeCard : MonoBehaviour
         GameManager.Instance.RandomCard();
         _numberCard = GameManager.Instance.nbrCard;
         card = GameManager.Instance.cardOnStart[_numberCard];
-       
+        
         GameManager.Instance.cardOnStart.Remove(GameManager.Instance.cardOnStart[_numberCard]);
+
+        gameObject.GetComponent<SpriteRenderer>().color = card.color;
     }
     void Update()
     {
