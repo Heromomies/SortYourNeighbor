@@ -40,11 +40,6 @@ public class GameManager : MonoBehaviour
         RandomCard();
     }
 
-    public void Update()
-    {
-        
-    }
-
     public void RandomCard()
     {
         nbrCard = Random.Range(0, cardOnStart.Count);

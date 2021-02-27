@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e80f6b448c78d4fafdb4077cb9f82d, type: 3}
   m_Name: White 1
   m_EditorClassIdentifier: 
-  pop: 0
-  rel: 3
+  rel: 1
+  sprite: {fileID: 0}

@@ -17,14 +17,11 @@ public class TakeCard : MonoBehaviour
         card = GameManager.Instance.cardOnStart[_numberCard];
        
         GameManager.Instance.cardOnStart.Remove(GameManager.Instance.cardOnStart[_numberCard]);
-        
-        Debug.Log(_numberCard);
-        Debug.Log(card.rel);
     }
     void Update()
     {
         //Movement
-        if (Input.GetMouseButton(0) && _isMouseOver)
+        if (Input.GetMouseButton(0) && _isMouseOver) // Can move the card with the mouse
         {
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = pos;
@@ -33,33 +30,10 @@ public class TakeCard : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(0, 0), fMovingSpeed);
         }
-        //Checking the speed
-        //Right Side
-        if (transform.position.x > 1)
-        {
-            if (!Input.GetMouseButton(0))
-            {
-                Debug.Log("Right !");
-            }
-        }
-        //Left Side
-        else if (transform.position.x < -1)
-        {
-            
-            if (!Input.GetMouseButton(0))
-            {
-                Debug.Log("Left !");
-            }
-        }
     }
 
-    private void OnMouseOver()
-    {
-        _isMouseOver = true;
-    }
-
-    private void OnMouseExit()
-    {
-        _isMouseOver = false;
-    }
+    #region MouseOver
+    private void OnMouseOver() { _isMouseOver = true; }
+    private void OnMouseExit() { _isMouseOver = false; }
+    #endregion
 }

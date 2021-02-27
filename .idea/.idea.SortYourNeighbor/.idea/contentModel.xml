@@ -753,9 +753,15 @@
           </e>
         </e>
         <e p="Script" t="Include">
-          <e p="Cards.cs" t="Include" />
+          <e p="Cards" t="Include">
+            <e p="Cards.cs" t="Include" />
+            <e p="TakeCard.cs" t="Include" />
+          </e>
           <e p="GameManager.cs" t="Include" />
-          <e p="TakeCard.cs" t="Include" />
+          <e p="Trash" t="Include">
+            <e p="GreenTrash.cs" t="Include" />
+            <e p="YellowTrash.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
