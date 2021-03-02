@@ -21,14 +21,11 @@ public class CheckCollider : MonoBehaviour
             if (other.gameObject.GetComponent<TakeCard>().card.rel == Cards.Religion.GreenTrash) // Check if the card can go to the green trash
             {
                 Debug.Log("Green Trash touched !");
-                GameManager.Instance.InstantiateCard();
-                other.gameObject.SetActive(false);
             }
             else
             {
-                Debug.Log("Not the good Trash :'(  !");
-                GameManager.Instance.InstantiateCard();
-                other.gameObject.SetActive(false);
+                Debug.Log("Not the good Trash :'( !");
+                
             }
         }
         if (trash == Trash.YellowTrash)
@@ -36,15 +33,13 @@ public class CheckCollider : MonoBehaviour
             if (other.gameObject.GetComponent<TakeCard>().card.rel == Cards.Religion.YellowTrash) // Check if the card can go to the yellow trash
             {
                 Debug.Log("Yellow Trash touched !");
-                GameManager.Instance.InstantiateCard();
-                other.gameObject.SetActive(false);
             }
             else
             {
-                Debug.Log("Not the good Trash :'(  !");
-                GameManager.Instance.InstantiateCard();
-                other.gameObject.SetActive(false);
+                Debug.Log("Not the good Trash :'( !");
             }
         }
+        GameManager.Instance.InstantiateCard();
+        other.gameObject.SetActive(false);
     }
 }
