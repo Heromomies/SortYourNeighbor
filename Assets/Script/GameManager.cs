@@ -51,7 +51,6 @@ public class GameManager : MonoBehaviour
     }
     public void InstantiateCard()
     {
-        Debug.Log("New Card Instantiate");
         Instantiate(cardToInstantiate, transform.position, Quaternion.identity);
         _objectInList--;
         if (_objectInList <= 0)

@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54e80f6b448c78d4fafdb4077cb9f82d, type: 3}
-  m_Name: Cards
+  m_Name: GarbageOrdureMenagere 2
   m_EditorClassIdentifier: 
-  rel: 1
+  rel: 2
   sprite: {fileID: 0}
-  color: {r: 1, g: 0.930426, b: 0, a: 1}
+  color: {r: 0.6698113, g: 0.55291027, b: 0.55291027, a: 1}
