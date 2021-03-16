@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SingleLevel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+   private int _currentStarsNum;
+   public int levelIndex;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   public void BackButton()
+   {
+      SceneManager.LoadScene("LevelSelector");
+   }
+   public void PressStarsButton(int starNum)
+   {
+      _currentStarsNum = starNum;
+      if (_currentStarsNum > PlayerPrefs.GetInt("Level" + levelIndex))
+      {
+         PlayerPrefs.SetInt("Level" + levelIndex, starNum);
+      }
+      Debug.Log(PlayerPrefs.GetInt("Level" + levelIndex, starNum));
+   }
 }

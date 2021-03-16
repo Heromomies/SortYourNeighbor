@@ -14,8 +14,23 @@ public class LevelSelection : MonoBehaviour
    private void Update()
    {
       UpdateLevelImage();
+      UpdateLevelStatus();
+      if (Input.GetKey(KeyCode.K))
+      {
+         PlayerPrefs.DeleteKey("Level");
+         PlayerPrefs.DeleteAll();
+      }
    }
-
+   
+   private void UpdateLevelStatus()
+   {
+      //If the current lvl is 5, the pre should be 4
+      int previousLevelNum = int.Parse(gameObject.name) - 1;
+      if (PlayerPrefs.GetInt("Level" + previousLevelNum) > 0)// If the first level star is bigger than 0
+      {
+         unlocked = true;
+      }
+   }
    private void UpdateLevelImage()
    {
       if (!unlocked)
