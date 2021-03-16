@@ -31,10 +31,7 @@
           </e>
           <e p="GameManager.cs" t="Include" />
           <e p="Levels" t="Include">
-            <e p="LevelData.cs" t="Include" />
-          </e>
-          <e p="Save" t="Include">
-            <e p="GameSaveManager.cs" t="Include" />
+            <e p="LevelSelection.cs" t="Include" />
           </e>
           <e p="Trash" t="Include">
             <e p="CheckCollider.cs" t="Include" />
