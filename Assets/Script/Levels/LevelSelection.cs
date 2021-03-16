@@ -11,6 +11,8 @@ public class LevelSelection : MonoBehaviour
    public Image unlockImage;
    public GameObject[] stars;
 
+   public Sprite starSprite;
+   
    private void Update()
    {
       UpdateLevelImage();
@@ -49,6 +51,12 @@ public class LevelSelection : MonoBehaviour
          for (int i = 0; i < stars.Length; i++)
          {
             stars[i].gameObject.SetActive(true);
+         }
+
+         for (int i = 0; i < PlayerPrefs.GetInt("Level" + gameObject.name); i++)
+         {
+            stars[i].gameObject.GetComponent<Image>().sprite = starSprite;
+            stars[i].gameObject.GetComponent<Image>().color = Color.yellow;
          }
       }
    }
