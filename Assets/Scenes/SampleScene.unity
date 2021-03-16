@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7939a76bc61c68544a25237716804391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreTxt: {fileID: 990438424}
   trash: 3
 --- !u!50 &240927744
 Rigidbody2D:
@@ -757,6 +758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7939a76bc61c68544a25237716804391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreTxt: {fileID: 990438424}
   trash: 0
 --- !u!1 &1263870114
 GameObject:
@@ -901,6 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7939a76bc61c68544a25237716804391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreTxt: {fileID: 990438424}
   trash: 1
 --- !u!1 &1480634247
 GameObject:
@@ -948,6 +951,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7939a76bc61c68544a25237716804391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreTxt: {fileID: 990438424}
   trash: 2
 --- !u!50 &1480634250
 Rigidbody2D:
@@ -1230,7 +1234,6 @@ MonoBehaviour:
   cardToInstantiate: {fileID: 2903485961163435499, guid: 94e43b8e7f578bf4c9624266527af0a4,
     type: 3}
   nbrCard: 0
-  time: 0
 --- !u!4 &1827047695
 Transform:
   m_ObjectHideFlags: 0

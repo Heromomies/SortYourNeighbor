@@ -8,10 +8,10 @@ using UnityEngine.UIElements;
 public class Cards : ScriptableObject
 {
     //public Color pop;
-    public Religion rel;
+    public Garbage grb;
 
     //public enum Color { White, Black, Red, Yellow, None }
-    public enum Religion { GreenTrash, YellowTrash, OrdureMenagere, Discharge, None }
+    public enum Garbage { GreenTrash, YellowTrash, OrdureMenagere, Discharge, None }
     
     public SpriteRenderer sprite;
     public Color color;

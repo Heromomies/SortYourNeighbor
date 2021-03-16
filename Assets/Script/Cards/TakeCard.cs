@@ -22,12 +22,30 @@ public class TakeCard : MonoBehaviour
     }
     void Update()
     {
-        //Movement
-        if (Input.GetMouseButton(0) && _isMouseOver) // Can move the card with the mouse
+        for (int i = 0; i < Input.touchCount; ++i)
+        {
+            Debug.Log(Input.touchCount);
+            if (Input.GetTouch(i).phase == TouchPhase.Began)
+            {
+                // Construct a ray from the current touch coordinates
+                Ray ray = Camera.main.ScreenPointToRay(Input.GetTouch(i).position);
+                if (Physics.Raycast(ray))
+                {
+                     Vector2 pos = Camera.main.ScreenToWorldPoint(Input.GetTouch(i).position);
+                     transform.position = pos;
+                }
+                else
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, new Vector2(0, 0), fMovingSpeed);
+                }
+            }
+        }
+
+        if (Input.GetMouseButton(0) && _isMouseOver)
         {
             Vector2 pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             transform.position = pos;
-        }
+        } 
         else
         {
             transform.position = Vector2.MoveTowards(transform.position, new Vector2(0, 0), fMovingSpeed);

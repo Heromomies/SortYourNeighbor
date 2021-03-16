@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Random = UnityEngine.Random;
@@ -34,9 +35,8 @@ public class GameManager : MonoBehaviour
     
     public List<Cards> cardOnStart;
     public GameObject cardToInstantiate;
-    
+
     [HideInInspector] public int nbrCard;
-    public float time;
 
     private int _objectInList;
     private void Start()

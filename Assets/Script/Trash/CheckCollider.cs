@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CheckCollider : MonoBehaviour
@@ -12,54 +14,53 @@ public class CheckCollider : MonoBehaviour
         Discharge,
         None
     }
-
+    public TextMeshProUGUI scoreTxt;
+    private int _score;
     public Trash trash;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (trash == Trash.GreenTrash)
         {
-            if (other.gameObject.GetComponent<TakeCard>().card.rel == Cards.Religion.GreenTrash) // Check if the card can go to the green trash
+            if (other.gameObject.GetComponent<TakeCard>().card.grb == Cards.Garbage.GreenTrash) // Check if the card can go to the green trash
             {
+                _score =_score += 10;
+                scoreTxt.text = $"Score : {_score}";
                 Debug.Log("Green Trash touched !");
-            }
-            else
-            {
-                Debug.Log("Not the good Trash :'( !");
-                
             }
         }
         if (trash == Trash.YellowTrash)
         {
-            if (other.gameObject.GetComponent<TakeCard>().card.rel == Cards.Religion.YellowTrash) // Check if the card can go to the yellow trash
+            if (other.gameObject.GetComponent<TakeCard>().card.grb == Cards.Garbage.YellowTrash) // Check if the card can go to the yellow trash
             {
+                _score = _score += 10;
+                scoreTxt.text = $"Score : {_score}";
                 Debug.Log("Yellow Trash touched !");
-            }
-            else
-            {
-                Debug.Log("Not the good Trash :'( !");
             }
         }
         if (trash == Trash.Discharge)
         {
-            if (other.gameObject.GetComponent<TakeCard>().card.rel == Cards.Religion.Discharge) // Check if the card can go to the Discharge trash
+            if (other.gameObject.GetComponent<TakeCard>().card.grb == Cards.Garbage.Discharge) // Check if the card can go to the Discharge trash
             {
+                _score = _score += 10;
+                scoreTxt.text = $"Score : {_score}";
                 Debug.Log("Discharge Trash touched !");
-            }
-            else
-            {
-                Debug.Log("Not the good Trash :'( !");
             }
         }
         if (trash == Trash.OrdureMenagere)
         {
-            if (other.gameObject.GetComponent<TakeCard>().card.rel == Cards.Religion.OrdureMenagere) // Check if the card can go to the OrdureMenagere trash
+            if (other.gameObject.GetComponent<TakeCard>().card.grb == Cards.Garbage.OrdureMenagere) // Check if the card can go to the OrdureMenagere trash
             {
+                _score = _score + 10;
+                scoreTxt.text = $"Score : {_score}";
                 Debug.Log("OrdureMenagere Trash touched !");
             }
-            else
-            {
-                Debug.Log("Not the good Trash :'( !");
-            }
+        }
+        else
+        {
+            _score -= 10;
+            Debug.Log("Not the good Trash :'( !");
+            scoreTxt.text = $"Score : {_score}";
         }
         GameManager.Instance.InstantiateCard();
         other.gameObject.SetActive(false);
