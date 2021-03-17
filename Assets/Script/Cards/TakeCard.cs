@@ -19,12 +19,12 @@ public class TakeCard : MonoBehaviour
         GameManager.Instance.cardOnStart.Remove(GameManager.Instance.cardOnStart[_numberCard]);
 
         gameObject.GetComponent<SpriteRenderer>().color = card.color;
+        GameManager.Instance.garbageText.text = card.def;
     }
     void Update()
     {
         for (int i = 0; i < Input.touchCount; ++i)
         {
-            Debug.Log(Input.touchCount);
             if (Input.GetTouch(i).phase == TouchPhase.Began)
             {
                 // Construct a ray from the current touch coordinates

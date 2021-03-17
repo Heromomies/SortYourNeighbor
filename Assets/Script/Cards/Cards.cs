@@ -11,8 +11,9 @@ public class Cards : ScriptableObject
     public Garbage grb;
 
     //public enum Color { White, Black, Red, Yellow, None }
-    public enum Garbage { GreenTrash, YellowTrash, OrdureMenagere, Discharge, None }
+    public enum Garbage { GreenTrash, YellowTrash, OrdureMenagere, Discharge }
     
     public SpriteRenderer sprite;
     public Color color;
+    public string def;
 }

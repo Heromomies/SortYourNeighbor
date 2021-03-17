@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54e80f6b448c78d4fafdb4077cb9f82d, type: 3}
   m_Name: GarbageGreenTrash 3
   m_EditorClassIdentifier: 
-  rel: 0
+  grb: 0
   sprite: {fileID: 0}
   color: {r: 0, g: 1, b: 0.013520956, a: 1}
+  def: Garbage Green Trash
